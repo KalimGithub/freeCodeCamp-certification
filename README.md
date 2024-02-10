@@ -1,1 +1,1 @@
-# freeCodeCamp-certification
+# technical documentation page for freecodecamp certification course
