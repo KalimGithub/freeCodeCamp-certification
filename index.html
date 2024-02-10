@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <header>React Docs</header>
+        <ul>
+            <li>
+                <a class="nav-link" href="#getting_started">Getting started</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#hello_world">Hello World</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#introducing_jsx">Introducing JSX</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#rendering_elements">Rendering Elements</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#components_and_props">Components and Props</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#state_and_lifecycle">State and Lifecycle</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#handling_events">Handling Events</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#reference">Reference</a>
+            </li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="getting_started">
+            <header>Getting started</header>
+            <p>React is a JavaScript library for building user interfaces. Learn what React is all about on our homepage or in the tutorial.</p>
+            <ul>
+                <li>Try React</li>
+                <li>Learn react</li>
+                <li>Stay Informed</li>
+                <li>versioned Documentation</li>
+            </ul>
+        </section>
+        <section class="main-section" id="hello_world">
+            <header>Hello World</header>
+            <p>The smallest React example looks like this:</p>
+            <code>
+                "const root = ReactDOM.createRoot(document.getElementById('root'));
+                root.render(Hello, world!);"
+            </code>
+            <p>It displays a heading saying “Hello, world!” on the page.</p>
+        </section>
+        <section class="main-section" id="introducing_jsx">
+            <header>Introducing JSX</header>
+            <p>Consider this variable declaration:</p>
+            <code>"const element = Hello, world!;"</code>
+            <p>This funny tag syntax is neither a string nor HTML.</p>
+            <p>It is called JSX, and it is a syntax extension to JavaScript. We recommend using it with React to describe what the UI should look like. JSX may remind you of a template language, but it comes with the full power of JavaScript.
+            </p>
+            <p>JSX produces React “elements”. We will explore rendering them to the DOM in the next section. Below, you can find the basics of JSX necessary to get you started.
+            </p>
+        </section>
+        <section class="main-section" id="rendering_elements">
+            <header>Rendering Elements</header>
+            <p>Elements are the smallest building blocks of React apps.</p>
+            <p>An element describes what you want to see on the screen:</p>
+            <code>
+                "const element = Hello, world;"
+            </code>
+            <p>Unlike browser DOM elements, React elements are plain objects, and are cheap to create. React DOM takes care of updating the DOM to match the React elements.</p>
+            <p>To render a React element, first pass the DOM element to ReactDOM.createRoot(), then pass the React element to root.render():</p>
+            <code>
+                "const root = ReactDOM.createRoot(
+                    document.getElementById('root')
+                  );
+                  const element = Hello, world;
+                  root.render(element);"
+            </code>
+        </section>
+        <section class="main-section" id="components_and_props">
+            <header>Components and Props</header>
+            <p>The simplest way to define a component is to write a JavaScript function:</p>
+            <code>
+                "function Welcome(props) {
+                    return Hello, {props.name};
+                  }"
+            </code>
+            <p>This function is a valid React component because it accepts a single “props” (which stands for properties) object argument with data and returns a React element. We call such components “function components” because they are literally JavaScript functions.</p>
+            <p>You can also use an ES6 class to define a component:</p>
+            <code>
+                "class Welcome extends React.Component {
+                    render() {
+                      return Hello, {this.props.name};
+                    }
+                  }"
+            </code>
+            <p>The above two components are equivalent from React’s point of view.</p>
+        </section>
+        <section class="main-section" id="state_and_lifecycle">
+            <header>State and Lifecycle</header>
+            <p>This page introduces the concept of state and lifecycle in a React component</p>
+            <p>Consider the ticking clock example from one of the previous sections. In Rendering Elements, we have only learned one way to update the UI. We call root.render() to change the rendered output:</p>
+            <code>
+                "const root = ReactDOM.createRoot(document.getElementById('root'));
+  
+                function tick() {
+                  const element = (
+                      Hello, world!
+                      It is {new Date().toLocaleTimeString()}.  
+                    );
+                  root.render(element);
+                } 
+                setInterval(tick, 1000);"
+            </code>
+        </section>
+        <section class="main-section" id="handling_events">
+            <header>Handling Events</header>
+            <p>Handling events with React elements is very similar to handling events on DOM elements. There are some syntax differences:</p>
+            <ul>
+                <li>React events are named using camelCase, rather than lowercase.</li>
+                <li>With JSX you pass a function as the event handler, rather than a string.</li>
+            </ul>
+            <p>Another difference is that you cannot return false to prevent default behavior in React. You must call preventDefault explicitly.</p>
+        </section>
+        <section class="main-section" id="reference">
+            <header>Reference</header>
+            <ul>
+                <li>All the documentation in this page is taken from <a href="https://legacy.reactjs.org/docs/getting-started.html">MDN</a></li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
